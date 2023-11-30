@@ -1,4 +1,4 @@
-# 🎄 [Advent Of Code 2023](https://adventofcode.com/2023)
+# 🎄 [Advent Of Code](https://adventofcode.com)
 
 ![Current day](https://img.shields.io/badge/Day-0-blue)
 ![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-0-yellow)
