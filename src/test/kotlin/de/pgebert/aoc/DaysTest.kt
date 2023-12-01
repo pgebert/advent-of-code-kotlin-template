@@ -3,6 +3,7 @@
 package de.pgebert.aoc
 
 import de.pgebert.aoc.days.*
+import de.pgebert.aoc.utils.shouldBe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.DynamicTest
 import org.junit.jupiter.api.TestFactory
@@ -16,7 +17,7 @@ class DaysTest {
 
     @TestFactory
     fun answers() = listOf(
-        Answer(Day01, NOT_IMPLEMENTED, NOT_IMPLEMENTED),
+        Answer(Day01, 53974, 52840),
         Answer(Day02, NOT_IMPLEMENTED, NOT_IMPLEMENTED),
         Answer(Day03, NOT_IMPLEMENTED, NOT_IMPLEMENTED),
         Answer(Day04, NOT_IMPLEMENTED, NOT_IMPLEMENTED),
@@ -41,15 +42,17 @@ class DaysTest {
         Answer(Day23, NOT_IMPLEMENTED, NOT_IMPLEMENTED),
         Answer(Day24, NOT_IMPLEMENTED, NOT_IMPLEMENTED),
         Answer(Day25, NOT_IMPLEMENTED, NOT_IMPLEMENTED),
-    ).map {
-        DynamicTest.dynamicTest("Day ${it.day.number} - ${it.day.title}") {
-            print("Testing Part 1 - Expecting ${it.partOne}..")
-            Assertions.assertEquals(it.partOne, it.day.partOne())
+    ).map { (day, expectedPartOne, expectedPartTwo) ->
+
+        DynamicTest.dynamicTest("Day ${day.number} - ${day.title}") {
+            print("Testing Part 1 - Expecting $expectedPartOne..")
+            day.partOne() shouldBe expectedPartOne
             print(" SUCCESS\n")
 
-            print("Testing Part 2 - Expecting ${it.partTwo}..")
-            Assertions.assertEquals(it.partTwo, it.day.partTwo())
+            print("Testing Part 2 - Expecting $expectedPartTwo..")
+            day.partTwo() shouldBe expectedPartTwo
             print(" SUCCESS\n")
         }
+
     }
 }
