@@ -7,17 +7,16 @@ import org.junit.jupiter.api.Assertions
 
 
 /**
- * Asserts that the receiver object is equal to the actual object.
+ * Asserts that the receiver object is equal to the expected object.
  *
  * Usage:
  * actualValue shouldBe expectedValue
  *
- * @param actual The object to be compared with the receiver.
+ * @param expected The object to be compared with the receiver.
  *
  * @throws AssertionError if the receiver object is not equal to the actual object.
  */
-infix fun <T> T.shouldBe(actual: T) = Assertions.assertEquals(this, actual)
-
+infix fun <T> T.shouldBe(expected: T) = Assertions.assertEquals(expected, this)
 
 
 /**
