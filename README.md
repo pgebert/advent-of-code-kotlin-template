@@ -36,8 +36,6 @@
 
 ---
 
-
-
 # How to use this template
 
 ## Getting Started
@@ -48,12 +46,14 @@ Copy your daily input data from the advent of code page to the corresponding `*.
 
 ### 2. Implement your solution
 
-Use the prepared solution classes under `src/main/kotlin/days` and implement the method stubs for partOne and partTwo. Each
+Use the prepared solution classes under `src/main/kotlin/days` and implement the method stubs for partOne and partTwo.
+Each
 day has two properties:
+
 - `inputString`: the input data as one string
 - `inputList`: the input data splitted into lines
 
-So your solution can be implmented in the following way:
+So your solution can be implemented in the following way:
 
 ```kotlin
 object Day01 : Day(1, "Day1") {
@@ -64,6 +64,7 @@ object Day01 : Day(1, "Day1") {
 }
 
 ```
+
 ### 3. Update tests
 
 This step is optional, but it's a nice way to proof that your solution is valid:
@@ -74,23 +75,23 @@ Extend the test factory in `src/test/kotlin/de/pgebert/aoc/DaysTest.kt`.
 
 ### Testing with example data
 
-By default, the input is read from the input file of the corresponding day, but for development it can be useful 
+By default, the input is read from the input file of the corresponding day, but for development it can be useful
 to test against the provided example input. This can be achieved very easily:
 
 ```kotlin
     @Test
-    fun `testing day 01 example`() {
-        val example = """
+fun `testing day 01 example`() {
+    val example = """
             1abc2
             pqr3stu8vwx
             a1b2c3d4e5f
             treb7uchet
         """
 
-        val day = Day01.withInput(example)
+    val day = Day01(input = example)
 
-        day.partOne() shouldBe 142
-    }
+    day.partOne() shouldBe 142
+}
 
 ```
 
@@ -98,7 +99,8 @@ to test against the provided example input. This can be achieved very easily:
 
 ## 🤝 Contributing
 
-Contributions, [issues](https://github.com/pgebert/advent-of-code-kotlin-template/issues) and [feature](https://github.com/pgebert/advent-of-code-kotlin-template/pulls) requests are welcome!
+Contributions, [issues](https://github.com/pgebert/advent-of-code-kotlin-template/issues)
+and [feature](https://github.com/pgebert/advent-of-code-kotlin-template/pulls) requests are welcome!
 
 ## Show your support
 

@@ -2,7 +2,6 @@ package de.pgebert.aoc
 
 import de.pgebert.aoc.days.Day01
 import de.pgebert.aoc.utils.shouldBe
-import de.pgebert.aoc.utils.withInput
 import org.junit.jupiter.api.Test
 
 
@@ -15,7 +14,7 @@ class ExampleTest {
             3abc4
         """
 
-        val day = Day01.withInput(example)
+        val day = Day01(input = example)
 
         day.partOne() shouldBe NOT_IMPLEMENTED
     }

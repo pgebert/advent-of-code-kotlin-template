@@ -3,7 +3,7 @@ package de.pgebert.aoc.days
 import de.pgebert.aoc.Day
 import de.pgebert.aoc.NOT_IMPLEMENTED
 
-object Day03 : Day(3, "Day3") {
+class Day03(input: String? = null) : Day(3, "Day3", input) {
 
     override fun partOne() = NOT_IMPLEMENTED
 
